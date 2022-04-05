@@ -1,9 +1,11 @@
 package br.com.dev.crud.service;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.DeleteMapping;
 
 import br.com.dev.crud.entities.Produto;
 import br.com.dev.crud.repositories.ProdutoRepository;
@@ -20,11 +22,24 @@ public class ProdutoService {
 
 	public List<Produto> list() {
 		List<Produto> produtos = new ArrayList<>();
-
-		while (produtoRepository.findAll().iterator().hasNext()) {
-			produtos.add(produtoRepository.findAll().iterator().next());
-		}
-
+		Iterator<Produto> iterator = produtoRepository.findAll().iterator();	
+		while (iterator.hasNext()) {
+			produtos.add(iterator.next());
+		}		
 		return produtos;
 	}
+
+	public void save(Produto produto) {
+		produtoRepository.save(produto);		
+	}
+
+	public void delete(int produtoId) {
+		produtoRepository.deleteById(produtoId);		
+		
+	}
+
+	public Produto findById(int id) {		
+		return produtoRepository.findById(id).orElseGet(null);
+	}
+
 }
