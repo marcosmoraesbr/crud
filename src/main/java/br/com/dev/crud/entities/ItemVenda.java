@@ -5,20 +5,24 @@ import java.math.BigInteger;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "ITEM_VENDA")
+@SequenceGenerator(name="ITEM_VENDA_SEQ", initialValue=1, allocationSize=1)
 public class ItemVenda {
 	
 	@Id
 	@Column(name = "ID", columnDefinition="NUMERIC(11)")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ITEM_VENDA_SEQ")
 	private int id;
-	@ManyToOne
-	@JoinColumn(name = "VENDA_ID", columnDefinition="NUMERIC(11)")
-	private Venda venda;
 	@OneToOne
 	@JoinColumn(name = "PRODUTO_ID", columnDefinition="NUMERIC(11)")
 	private Produto produto;
@@ -34,12 +38,6 @@ public class ItemVenda {
 	}
 	public void setId(int id) {
 		this.id = id;
-	}
-	public Venda getVenda() {
-		return venda;
-	}
-	public void setVenda(Venda venda) {
-		this.venda = venda;
 	}
 	public Produto getProduto() {
 		return produto;
@@ -67,5 +65,4 @@ public class ItemVenda {
 	}
 	
 	
-
 }

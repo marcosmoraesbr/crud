@@ -2,13 +2,20 @@ package br.com.dev.crud.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "VENDEDOR")
+@SequenceGenerator(name="VENDEDOR_SEQ", initialValue=1, allocationSize=1)
 public class Vendedor {
 
 	@Id
 	@Column(name = "ID", columnDefinition="NUMERIC(11)")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "VENDEDOR_SEQ")
 	private int id;
 	@Column(name = "NOME", columnDefinition="VARCHAR(30)")
 	private String nome;
