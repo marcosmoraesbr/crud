@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "7ea4420a-46f7-46a9-b2e5-38b4ba4fd551",
+		"name": "VENDEDOR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/vendedor/listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/vendedor/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vendedor",
+						"listar"
+					]
+				},
+				"description": "Listar"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/vendedor/ler/5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/vendedor/ler/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vendedor",
+						"ler",
+						"6"
+					]
+				},
+				"description": "Ler por ID"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/vendedor/criar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"nome\": \"JAIR\",\r\n    \"telefone\": \"018-2360-0999\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/vendedor/criar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vendedor",
+						"criar"
+					]
+				},
+				"description": "Criar"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/vendedor/atualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 6,\r\n    \"nome\": \"JAIR\",\r\n    \"telefone\": \"018-2360-0991\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/vendedor/atualizar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vendedor",
+						"atualizar"
+					]
+				},
+				"description": "Atualizar"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/vendedor/excluir/6",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/vendedor/excluir/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vendedor",
+						"excluir",
+						"6"
+					]
+				},
+				"description": "Excluir"
+			},
+			"response": []
+		}
+	]
+}

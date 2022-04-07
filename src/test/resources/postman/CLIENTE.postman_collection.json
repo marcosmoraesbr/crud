@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "d60eec10-84a8-4d32-a65a-c12b6fbf4f62",
+		"name": "CLIENTE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/cliente/listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cliente/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"listar"
+					]
+				},
+				"description": "Listar"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/cliente/ler/5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cliente/ler/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"ler",
+						"5"
+					]
+				},
+				"description": "Ler por ID"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/cliente/criar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"nome\": \"ANA\",\r\n    \"telefone\": \"014-99553-4420\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cliente/criar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"criar"
+					]
+				},
+				"description": "Criar"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/cliente/atualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 6,\r\n        \"nome\": \"ADALBERTX\",\r\n        \"telefone\": \"014-99553-4421\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cliente/atualizar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"atualizar"
+					]
+				},
+				"description": "Atualizar"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/cliente/excluir/6",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cliente/excluir/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"excluir",
+						"7"
+					]
+				},
+				"description": "Excluir"
+			},
+			"response": []
+		}
+	]
+}
